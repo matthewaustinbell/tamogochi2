@@ -16,7 +16,7 @@ const shortSleep = () => {
   }
 };
 
-const deepSlumber = () => {
+const deepSleep = () => {
   if (sleep.reduce(getSum) < 41) {
     sleep.push(60);
     sleep.reduce(getSum);
@@ -27,11 +27,11 @@ const deepSlumber = () => {
 
 const domStringBuilder = () => {
   domString += '<button id="shortSleep">Short Nap</button>';
-  domString += '<button id="deepSlumber">Solid 8 Hours</button>';
+  domString += '<button id="deepSleep">Solid 8 Hours</button>';
   domString += `<div id="rest">${sleep}</div>`;
   util.printToDom('sleep', domString);
   document.getElementById('shortSleep').addEventListener('click', shortSleep);
-  document.getElementById('deepSlumber').addEventListener('click', deepSlumber);
+  document.getElementById('deepSleep').addEventListener('click', deepSleep);
 };
 
 export default { domStringBuilder };

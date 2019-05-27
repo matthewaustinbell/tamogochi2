@@ -26,8 +26,8 @@ const aLittleFun = () => {
 };
 
 const domStringBuilder = () => {
-  domString += '<button id="veryFun">Big Fun</button>';
-  domString += '<button id="aLittleFun">No Fun</button>';
+  domString += '<button id="veryFun">Super Fun</button>';
+  domString += '<button id="aLittleFun">Slightly Fun</button>';
   domString += `<div id="fun">${fun}</div>`;
   util.printToDom('play', domString);
   document.getElementById('veryFun').addEventListener('click', veryFun, false);

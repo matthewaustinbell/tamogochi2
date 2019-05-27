@@ -7,7 +7,7 @@ function getSum(total, push) {
   return total + push;
 }
 
-const healthyEats = () => {
+const healthFood = () => {
   if (full.reduce(getSum) < 91) {
     full.push(10);
     full.reduce(getSum);
@@ -16,7 +16,7 @@ const healthyEats = () => {
   }
 };
 
-const unHealthyEats = () => {
+const junkFood = () => {
   if (full.reduce(getSum) > 2) {
     full.push(-3);
     full.reduce(getSum);
@@ -30,8 +30,8 @@ const domStringBuilder = () => {
   domString += '<button type="button" id="unhealthyFood">Drink water</button>';
   domString += `<div id="full">${full}</div>`;
   util.printToDom('eat', domString);
-  document.getElementById('healthyFood').addEventListener('click', healthyEats, false);
-  document.getElementById('unhealthyFood').addEventListener('click', unHealthyEats);
+  document.getElementById('healthyFood').addEventListener('click', healthFood, false);
+  document.getElementById('unhealthyFood').addEventListener('click', junkFood);
   util.printToDom('pet', '<img id="img" src="../../../src/img/images.jpg">');
 };
 
